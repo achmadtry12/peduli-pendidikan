@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #d3e4fc;
+  color: #253238;
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #9c9b61;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f8f2f2;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #faf9f9;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  background-color: #d8cdcd;
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  text-size-adjust: inherit;
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+}
+
+.logoSiDongo {
+  display: block;
+  margin: 0 auto 20px;
+  width: auto;
+  text-align: center;
+  baseline-shift: inherit;
+  border-image: round;
+}
+
+section2 {
+  display: block;
+  font-size-adjust: inherit;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  text-align: center;
+  background-color: #d8cdcd;
+}
+
+box {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+mobileresponsive {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
