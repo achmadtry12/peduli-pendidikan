@@ -1,10 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="pendidikan, artikel pendidikan, informasi pendidikan, Indonesia"
+    />
+    <meta
+      name="description"
+      content="Peduli Pendidikan adalah platform yang menyediakan informasi dan artikel terkait pendidikan di Indonesia."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Damhca Thaxton" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="yandex" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="your-google-site-verification-code"
+    />
     <title>Peduli Pendidikan</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <header>
@@ -18,19 +41,23 @@
         />
       </logo>
       <p>Indonesia maju karena pendidikan bukan karena makan gratis.</p>
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Damhca Thaxton</a></li>
-          <li><a href="#">Kontak</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div>
+          <a href="#">Tentang Peduli Pendidikan</a>
+        </div>
+        <div>
+          <a href="#">Syarat dan Ketentuan</a>
+        </div>
+        <div>
+          <a href="#">Kontak</a>
+        </div>
+      </div>
     </header>
 
     <search>
-      <form>
+      <form id="pencarianForm">
         <input type="text" placeholder="Cari artikel..." />
-        <button type="submit">Cari</button>
+        <button type="submit" id="btn">Cari</button>
       </form>
     </search>
 
@@ -39,36 +66,47 @@
         <h2>Artikel Pendidikan</h2>
         <grid>
           <article>
-            <h3>Manfaat Pendidikan untuk Masa Depan</h3>
+            <h3><a href="#">Seberapa Tertinggal Pendidikan Indonesia?</a></h3>
             <p>
-              Pendidikan adalah kunci untuk membuka pintu kesuksesan di masa
-              depan. Dengan pendidikan yang baik, seseorang dapat mengembangkan
-              keterampilan dan pengetahuan yang diperlukan untuk meraih impian
-              mereka.
+              Pendidikan Indonesia masih menghadapi berbagai tantangan seperti
+              kualitas guru, fasilitas yang tidak merata, dan akses yang
+              terbatas di daerah terpencil. Namun, dengan upaya bersama, kita
+              dapat meningkatkan kualitas pendidikan untuk masa depan yang lebih
+              baik.
             </p>
+            <hr />
           </article>
           <article>
-            <h3>Peran Guru dalam Pendidikan</h3>
+            <h3><a href="#">Gaji Guru di Indonesia</a></h3>
             <p>
-              Guru memiliki peran penting dalam membentuk karakter dan masa
-              depan siswa. Mereka tidak hanya mengajar, tetapi juga memberikan
-              inspirasi dan motivasi kepada siswa untuk mencapai potensi terbaik
-              mereka.
+              Gaji guru di Indonesia masih belum memadai dibandingkan dengan
+              profesi lain yang memiliki tingkat pendidikan yang sama. Hal ini
+              dapat memengaruhi motivasi dan kualitas pengajaran yang diberikan
+              oleh para guru.
             </p>
+            <hr />
           </article>
           <article>
-            <h3>Tantangan Pendidikan di Era Digital</h3>
+            <h3>
+              <a href="#"
+                >Saudar-saudara, saya mau tanya. Apakah MBG (Makan Bergizi
+                Gratis) bermanfaat?</a
+              >
+            </h3>
             <p>
-              Di era digital, pendidikan menghadapi berbagai tantangan seperti
-              akses yang tidak merata, penyebaran informasi yang cepat, dan
-              kebutuhan untuk mengadaptasi metode pembelajaran yang inovatif.
+              MBG (Makan Bergizi Gratis) dapat memberikan manfaat bagi siswa
+              yang kurang mampu dengan menyediakan makanan bergizi di sekolah.
+              Namun, program ini harus diimbangi dengan upaya untuk meningkatkan
+              kualitas pendidikan secara keseluruhan agar tidak hanya fokus pada
+              aspek nutrisi saja.
             </p>
+            <hr />
           </article>
         </grid>
       </section>
 
       <section2 class="sidongo">
-        <h2>SiDongo</h2>
+        <h2>SiDongo (Masih dibangun)</h2>
         <box>
           <img
             class="logoSiDongo"
@@ -83,10 +121,35 @@
           </p>
         </box>
       </section2>
+
+      <section3 class="damhcathaxton">
+        <h2>
+          <a
+            href="https://damhcathaxton.wordpress.com/"
+            target="_blank"
+            noreferrer
+            >Damhca Thaxton</a
+          >
+        </h2>
+        <box>
+          <img
+            class="logoDamhca"
+            src="https://i.ibb.co.com/k6whh6wG/6281292777056-status-779497d73a25495cabc071d6bf1133b8.jpg"
+            alt="Logo Damhca Thaxton"
+            width="200"
+            height="200"
+          />
+          <p>
+            Damhca Thaxton adalah blog pribadi milik Damhca Thaxton yang berisi
+            tulisan-tulisan tentang berbagai topik yang dia minati.
+          </p>
+        </box>
+      </section3>
     </main>
 
     <footer>
       <p>&copy; 2026 Peduli Pendidikan. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

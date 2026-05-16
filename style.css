@@ -2,18 +2,44 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  margin: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding: 5px;
   background: #d3e4fc;
   color: #253238;
+  flex-direction: row;
 }
+
 .container {
   max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #9c9b61;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.container div {
+  background: #e7e5e1;
+  padding: 10px;
+  float: auto;
+  flex-direction: auto;
+  border-radius: auto;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: full-width;
+  color: #000000;
+  justify-content: center;
+  justify-self: center;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -59,6 +85,9 @@ header {
 section {
   padding: 20px;
   background-color: #d8cdcd;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 footer {
   background: #333;
@@ -69,6 +98,10 @@ footer {
 
 main {
   padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background-color: bisque;
 }
 
 ul {
@@ -89,7 +122,27 @@ ul {
   border-image: round;
 }
 
+.logoDamhca {
+  display: block;
+  margin: 0 auto 20px;
+  width: auto;
+  text-align: center;
+  baseline-shift: inherit;
+  border-image: round;
+}
+
 section2 {
+  display: block;
+  font-size-adjust: inherit;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  text-align: center;
+  background-color: #d8cdcd;
+  gap: 10px;
+  padding: 10px;
+}
+
+section3 {
   display: block;
   font-size-adjust: inherit;
   font-family: "Times New Roman", Times, serif;
@@ -102,6 +155,12 @@ box {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+widget {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 mobileresponsive {
