@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "monospace", monospace;
   margin: 30px;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding: 5px;
   background: #d3e4fc;
-  color: #253238;
+  color: #000000;
   flex-direction: row;
 }
 
@@ -18,7 +18,7 @@ body {
   margin: auto;
   padding: 10px;
   border-radius: 10px;
-  flex-direction: row;
+  flex-direction: auto;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -27,19 +27,14 @@ body {
 .container div {
   background: #e7e5e1;
   padding: 10px;
-  float: auto;
-  flex-direction: auto;
-  border-radius: auto;
-  display: flex;
-  font-family: "Times New Roman", Times, serif;
-  font-size: large;
-  font-weight: bold;
-  text-transform: capitalize;
-  text-align: full-width;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: space-between;
+  font-size: larger;
   color: #000000;
-  justify-content: center;
-  justify-self: center;
-  box-sizing: border-box;
+  font-weight: bold;
+  font-display: block;
+  font-size-adjust: inherit;
 }
 
 h2 {
@@ -80,6 +75,18 @@ header {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+  font-family: monospace;
+  font-weight: lighter;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #000;
+  margin: auto;
+  flex-direction: row;
+  font-display: block;
+  color: black;
 }
 
 section {
@@ -88,6 +95,8 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 footer {
   background: #333;
@@ -109,7 +118,7 @@ ul {
   padding: 0;
   text-align: center;
   text-size-adjust: inherit;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "monospace", monospace;
   font-size: larger;
 }
 
@@ -140,6 +149,8 @@ section2 {
   background-color: #d8cdcd;
   gap: 10px;
   padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 section3 {
@@ -149,18 +160,22 @@ section3 {
   color: #000000;
   text-align: center;
   background-color: #d8cdcd;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 10px;
 }
 
-box {
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-widget {
-  padding: 20px;
-  border-radius: 8px;
+section4 {
+  display: block;
+  font-size-adjust: inherit;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
   text-align: center;
+  background-color: #d8cdcd;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 mobileresponsive {
