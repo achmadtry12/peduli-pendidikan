@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berhenti Berlangganan - Peduli Pendidikan</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background-color: #fff8f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 500px;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #fc0038;
+      }
+      button {
+        background-color: #fc0038;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #cc002e;
+      }
+      .success {
+        color: green;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📧 Berhenti Berlangganan</h1>
+      <p>
+        Klik tombol di bawah jika kamu tidak ingin menerima notifikasi artikel
+        lagi dari Peduli Pendidikan.
+      </p>
+      <button id="unsubscribeBtn">Ya, Hentikan Langganan Saya</button>
+      <div id="message"></div>
+    </div>
+
+    <script>
+      // Ambil email dari URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const email = urlParams.get("email");
+
+      document
+        .getElementById("unsubscribeBtn")
+        .addEventListener("click", function () {
+          if (!email) {
+            document.getElementById("message").innerHTML =
+              '<p class="success">❌ Email tidak ditemukan.</p>';
+            return;
+          }
+
+          // Ambil daftar subscriber dari localStorage
+          let subscribers = JSON.parse(
+            localStorage.getItem("subscribers") || "[]",
+          );
+          const newSubscribers = subscribers.filter((s) => s.email !== email);
+
+          if (subscribers.length === newSubscribers.length) {
+            document.getElementById("message").innerHTML =
+              '<p class="success">⚠️ Email tidak ditemukan dalam daftar langganan.</p>';
+          } else {
+            localStorage.setItem("subscribers", JSON.stringify(newSubscribers));
+            document.getElementById("message").innerHTML =
+              '<p class="success">✅ Kamu telah berhenti berlangganan. Email tidak akan menerima notifikasi lagi.</p>';
+            document.getElementById("unsubscribeBtn").disabled = true;
+          }
+        });
+    </script>
+  </body>
+</html>

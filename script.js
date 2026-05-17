@@ -60,6 +60,43 @@ emailInput.addEventListener("keypress", function (event) {
   }
 });
 
+// ========== INISIALISASI EMAILJS ==========
+// GANTI DENGAN PUBLIC KEY DARI MENU INTEGRATION
+emailjs.init("MASUKKAN_PUBLIC_KEY_KAMU"); // Contoh: "user_abc123xyz"
+
+// Fungsi kirim notifikasi ke semua subscriber
+async function notifyAllSubscribers(postTitle, postUrl) {
+  let successCount = 0;
+
+  for (const subscriber of subscribers) {
+    // Buat link unsubscribe untuk setiap email
+    const unsubscribeUrl = `https://pedulipendidikan.my.id/unsubscribe.html?email=${encodeURIComponent(subscriber.email)}`;
+
+    try {
+      await emailjs.send(
+        "service_zrk6scd", // Ganti dengan Service ID kamu
+        "template_7nxrf3l", // Ganti dengan Template ID kamu
+        {
+          name: "Sahabat Peduli Pendidikan", // Atau bisa pakai nama subscriber
+          to_email: subscriber.email,
+          postTitle: postTitle,
+          postUrl: postUrl,
+          unsubscribeUrl: unsubscribeUrl,
+        },
+      );
+      successCount++;
+      console.log(`✅ Email terkirim ke: ${subscriber.email}`);
+    } catch (error) {
+      console.error(`❌ Gagal kirim ke ${subscriber.email}:`, error);
+    }
+  }
+
+  alert(
+    `✅ Notifikasi terkirim ke ${successCount} dari ${subscribers.length} subscriber!`,
+  );
+  return successCount;
+}
+
 addEventListener("DOMContentLoaded", function () {
   const fontSizeToggle = document.getElementById("fontSizeToggle");
   fontSizeToggle.addEventListener("click", function () {
