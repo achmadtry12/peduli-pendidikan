@@ -39,7 +39,9 @@ function handleSubscription() {
   }
 
   // Jika valid, simpan atau kirim data
-  alert(`Terima kasih ${email} telah berlangganan!`);
+  alert(
+    `Selamat ${email} kamu adalah salah satu manusia yang sudah mau berkontribusi untuk pendidikan di Indonesia!`,
+  );
 
   // Optional: Kosongkan input setelah berhasil
   emailInput.value = "";

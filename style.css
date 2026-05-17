@@ -178,6 +178,16 @@ section4 {
   border-radius: 20px;
 }
 
+.logo image {
+  display: block;
+  margin: 0 auto 20px;
+  width: auto;
+  text-align: center;
+  baseline-shift: inherit;
+  border-image: round;
+  padding: 10px;
+}
+
 mobileresponsive {
   display: block;
   margin: 0 auto;
