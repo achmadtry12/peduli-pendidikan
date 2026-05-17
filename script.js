@@ -18,6 +18,46 @@ btn.addEventListener("click", function () {
 
 console.log("Script loaded successfully!");
 
+// Ambil elemen yang diperlukan
+const subscribeBtn = document.getElementById("subscribeBtn");
+const emailInput = document.querySelector('.contact input[type="email"]');
+
+// Fungsi untuk menangani subscription
+function handleSubscription() {
+  const email = emailInput.value.trim();
+
+  // Validasi email tidak kosong
+  if (email === "") {
+    alert("Masukkan alamat email Anda terlebih dahulu!");
+    return;
+  }
+
+  // Validasi format email sederhana
+  if (!email.includes("@") || !email.includes(".")) {
+    alert("Masukkan alamat email yang valid!");
+    return;
+  }
+
+  // Jika valid, simpan atau kirim data
+  alert(`Terima kasih ${email} telah berlangganan!`);
+
+  // Optional: Kosongkan input setelah berhasil
+  emailInput.value = "";
+
+  // Optional: Simpan ke localStorage
+  localStorage.setItem("subscriberEmail", email);
+}
+
+// Tambahkan event listener ke tombol
+subscribeBtn.addEventListener("click", handleSubscription);
+
+// Optional: Tekan Enter di input juga bisa subscribe
+emailInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    handleSubscription();
+  }
+});
+
 addEventListener("DOMContentLoaded", function () {
   const fontSizeToggle = document.getElementById("fontSizeToggle");
   fontSizeToggle.addEventListener("click", function () {
