@@ -179,13 +179,14 @@ section4 {
 }
 
 .logo image {
-  display: block;
+  display: flex;
   margin: 0 auto 20px;
   width: auto;
   text-align: center;
   baseline-shift: inherit;
   border-image: round;
   padding: 10px;
+  flex-direction: row;
 }
 
 mobileresponsive {
