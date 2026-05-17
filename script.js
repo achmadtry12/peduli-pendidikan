@@ -27,7 +27,7 @@ console.log("✅ Script loaded successfully!");
 // ========== KONFIGURASI GOOGLE SHEETS ==========
 // GANTI DENGAN URL DEPLOYMENT KAMU
 const GOOGLE_SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbzlQgrqgitbS14CbJs53q5EILOAPEG5loZ4f3X3w9nWcuIcI609RwFLdBcwi_wQpEz6/exec";
+  "https://script.google.com/macros/s/AKfycbxKt4yeNYC5OEajeHMJ7I4zwV0__NspG1ddufB_6lncWivIRHgMpZtnFGH5I1SBQgin/exec";
 
 // ========== KODE SUBSCRIBE ==========
 const subscribeBtn = document.getElementById("subscribeBtn");
