@@ -62,7 +62,7 @@ emailInput.addEventListener("keypress", function (event) {
 
 // ========== INISIALISASI EMAILJS ==========
 // GANTI DENGAN PUBLIC KEY DARI MENU INTEGRATION
-emailjs.init("MASUKKAN_PUBLIC_KEY_KAMU"); // Contoh: "user_abc123xyz"
+emailjs.init("pTyG0FZ62ymwopkd4"); // Contoh: "user_abc123xyz"
 
 // Fungsi kirim notifikasi ke semua subscriber
 async function notifyAllSubscribers(postTitle, postUrl) {
