@@ -891,3 +891,79 @@ button:active::after {
     font-size: 0.85rem;
   }
 }
+
+.social-share-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-share-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.95em;
+  cursor: pointer;
+  border: none;
+}
+
+.share-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Warna spesifik untuk setiap platform */
+.share-x:hover {
+  background-color: #000;
+  color: white;
+}
+
+.share-whatsapp:hover {
+  background-color: #25d366;
+  color: white;
+}
+
+.share-facebook:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+.share-threads:hover {
+  background-color: #000;
+  color: white;
+}
+
+.share-copy:hover {
+  background-color: #4caf50;
+  color: white;
+}
