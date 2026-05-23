@@ -353,3 +353,15 @@ createAdminPanel();
 console.log(
   "✅ Semua kode berjalan dengan baik! Data subscriber akan tersimpan di Google Sheets.",
 );
+
+function copyToClipboard() {
+  const url = window.location.href;
+  navigator.clipboard
+    .writeText(url)
+    .then(() => {
+      alert("Link berhasil disalin!");
+    })
+    .catch((err) => {
+      console.error("Gagal menyalin:", err);
+    });
+}
